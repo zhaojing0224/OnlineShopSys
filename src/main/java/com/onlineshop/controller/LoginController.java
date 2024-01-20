@@ -25,7 +25,7 @@ public class LoginController {
 	@GetMapping("/login")
 	public String normalUserInfo(Model model) {
 
-		//model.addAttribute("homePage", "normalUserInfo");
+		model.addAttribute("homePage", "normalUserInfo");
 
 		return "/loginPage";
 	}
