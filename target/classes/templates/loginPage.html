@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop</title>
+	<link href="/css/accountStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div id="shopify-section-header" class="shopify-section section--header">
+		<header class="site-header">
+
+			<div class="main">
+				<div class="inner">
+
+					<p><a href="/"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/logo_chiikawamarket.png?v=1659340705"
+								alt="ちいかわマーケット" class="header_logo"></a></p>
+
+					<ul>
+						<li><a href="/account/login"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
+									alt="ログイン"></a></li>
+						<li><a href="/cart"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
+									alt="カート"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="mobile_nav">
+
+				<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+				<label for="menu-toggle" class="menu-button"></label>
+				<div class="drawer-menu">
+					<div class="inner">
+
+						<div class="welcome">
+							<p>
+								こんにちはッ! ゲストさん
+							</p>
+							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+								alt="ちいかわマーケットへようこそ">
+						</div>
+
+						<div class="btn_login_mypage">
+
+							<a href="/account/login" class="login">会員登録・ログイン</a>
+
+						</div>
+
+						<div class="search">
+							<form action="/search" method="get" role="search">
+								<input type="hidden" name="type" value="product">
+								<input type="search" name="q" value="" placeholder="商品をさがす">
+								<button type="submit"></button>
+							</form>
+						</div>
+
+						<input id="acd-check1" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu1">キャラクターから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/chiikawa">ちいかわ</a></li>
+								<li><a href="/collections/hachiware">ハチワレ</a></li>
+								<li><a href="/collections/usagi">うさぎ</a></li>
+							</ul>
+						</div>
+
+						<input id="acd-check2" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu2">商品カテゴリから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+								<li><a href="/collections/stationery">文房具</a></li>
+								<li><a href="/collections/stickers">ステッカー</a></li>
+								<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+								<li><a href="/collections/towel">タオル</a></li>
+								<li><a href="/collections/recommend">おすすめ商品</a></li>
+								<li><a href="/collections/all">全商品</a></li>
+							</ul>
+						</div>
+
+						<ul class="guide_menu">
+							<li><a href="/pages/guide">ご利用ガイド</a></li>
+							<li><a href="/pages/faq">よくあるご質問</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<label for="menu-toggle" class="menu-background"></label>
+
+			</div>
+
+			<div class="sub">
+				<div class="inner">
+
+					<ul class="menu">
+
+						<li class="menu_chara"><span>キャラクター<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w1">
+										<li><b>キャラクター</b></li>
+										<li><a href="/collections/chiikawa">ちいかわ</a></li>
+										<li><a href="/collections/hachiware">ハチワレ</a></li>
+										<li><a href="/collections/usagi">うさぎ</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li class="menu_cate"><span>カテゴリ<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w2">
+										<li><b>カテゴリ</b></li>
+										<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+										<li><a href="/collections/stationery">文房具</a></li>
+										<li><a href="/collections/stickers">ステッカー</a></li>
+										<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+									</ol>
+
+									<ol class="w1">
+										<li><b>　</b></li>
+										<li><a href="/collections/towel">タオル</a></li>
+										<li><a href="/collections/recommend">おすすめ商品</a></li>
+										<li><a href="/collections/all">全商品</a></li>
+										<li><a href="/collections/newitems">新着商品一覧</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li><a href="/pages/guide">ご利用ガイド</a></li>
+						<li><a href="/blogs/info/">お知らせ</a></li>
+					</ul>
+
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<input type="hidden" name="type" value="product">
+							<input type="search" name="q" value="" placeholder="商品をさがす">
+							<button type="submit"></button>
+						</form>
+					</div>
+
+					<div class="welcome">
+						<p>
+							こんにちはッ! ゲストさん
+						</p>
+						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+							alt="ちいかわマーケットへようこそ">
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+
+	</div>
+
+
+
+	<main class="layout--main-content" id="main-content">
+
+		<div id="shopify-section-template--16808543781105__main" class="shopify-section">
+			<div class="login_wrapper">
+
+				<div class="customer--root pages--wrapper" data-section-id="template--16808543781105__main">
+					<div class="customer--wrapper">
+						<div id="customer-login" class="customer--login">
+							<p id="account-reset" class="account--reset" data-item="paragraph">
+								パスワードをリセットするためのメールを送信しました
+							</p>
+							<h1 data-item="section-heading" style="font-family:'M PLUS Rounded 1c';">ログイン
+							</h1>
+
+							<form method="post" action="/login" id="customer_login" accept-charset="UTF-8"
+								data-login-with-shop-sign-in="true"><input type="hidden" name="form_type"
+									value="customer_login"><input type="hidden" name="utf8" value="✓">
+
+
+								<label for="customer_email" class="label" data-item="accent-text"
+									style="font-family:'M PLUS Rounded 1c';">メールアドレス</label>
+								<br></br>
+								<input class="text" type="email" value="" name="searchId" id="searchId" required="">
+								<br></br>
+
+
+								<label for="customer_password" class="label" data-item="accent-text"
+									style="font-family:'M PLUS Rounded 1c';">パスワード</label>
+								<br></br>
+								<input class="text" type="password" value="" name="customer[password]"
+									id="customer_password" size="16" required="">
+								<p class="account--forgot-password" data-item="block-link">
+									<a href="#" onclick="showRecoverPasswordForm();return false;"
+										style="font-family:'M PLUS Rounded 1c';">パスワードを忘れましたか？</a>
+								</p>
+
+
+
+								<div class="account--sign-in" data-item="button"
+									style="width:180px; margin:0 auto 25px auto;">
+									<button type="submit" value="ログイン"
+										style="width:100%; border-radius:30px; font-weight:500; font-family:'M PLUS Rounded 1c'; background:#2f9ae0;">ログイン</button>
+								</div>
+
+								<div style="border-top:1px dotted #ccc;"></div>
+
+								<form th:action="@{/userRegister}" method="get">
+									<div style="width:240px; margin:25px auto 0 auto;;">
+										<a class="account--register" href="/userRegisterPage"
+											data-item="secondary-button"
+											style="width:100%; border-radius:30px; margin:0;">
+											<div
+												style="width:100%; border-radius:30px; margin:0; font-weight:500; font-family:'M PLUS Rounded 1c'; color:#2f9ae0; border:2px solid #2f9ae0;">
+												新規会員登録はこちら</div>
+										</a>
+									</div>
+								</form>
+
+							</form>
+						</div>
+
+						<div class="account--recover-password" id="recover-password" style="display:none;">
+							<h1 data-item="section-heading">パスワードをリセット</h1>
+							<p class="account--reset-instructions" data-item="paragraph">
+								パスワードをリセットするためのメールを送信します
+							</p>
+
+							<form method="post" action="/account/recover" accept-charset="UTF-8"><input type="hidden"
+									name="form_type" value="recover_customer_password"><input type="hidden" name="utf8"
+									value="✓">
+
+
+								<label for="email" class="label" data-item="accent-text">
+									メールアドレス
+								</label>
+								<input class="text" type="email" value="" size="30" name="email" id="recover-email"
+									required="">
+
+								<div class="account--password-buttons">
+									<div class="account--submit" data-item="button">
+										<button type="submit" value="送信">送信</button>
+									</div>
+									<span data-item="block-link">
+										<a class="account--cancel" href="#"
+											onclick="hideRecoverPasswordForm();return false;">キャンセル</a>
+									</span>
+								</div>
+
+
+							</form>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+
+
+			<script type="text/javascript">
+				function showRecoverPasswordForm() {
+					document.getElementById('recover-password').style.display = 'block';
+					document.getElementById('customer-login').style.display = 'none';
+				}
+
+				function hideRecoverPasswordForm() {
+					document.getElementById('recover-password').style.display = 'none';
+					document.getElementById('customer-login').style.display = 'block';
+				}
+
+				function showRecoverSuccess() {
+					document.getElementById('account-reset').style.display = 'block';
+				}
+
+				if (window.location.hash == '#recover') {showRecoverPasswordForm()}
+
+				if (window.location.hash == '#recover-successful') {showRecoverSuccess()}
+			</script>
+		</div>
+
+	</main>
+
+	<div id="shopify-section-footer" class="shopify-section section--footer">
+		<div style="margin-top:50px;">
+			<section class="banners_wrapper">
+
+				<ul>
+					<li><a href="/account/login"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_regist2.png?v=1647955309"
+								alt="会員登録"></a></li>
+					<li><a href="/pages/guide"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_guide2.png?v=1647955309"
+								alt="ご利用ガイド"></a></li>
+					<li><a href="/pages/faq"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_faq2.png?v=1647955309"
+								alt="よくあるお問い合わせ"></a></li>
+					<li><a href="/blogs/info"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_info3.png?v=1647955309"
+								alt="お知らせ"></a></li>
+				</ul>
+
+			</section>
+
+		</div>
+
+
+		<section class="sub_footer">
+
+			<div class="footer_img"><img
+					src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/footer-chiikawa.gif?v=1646646476"
+					alt="ちいかわマーケット"></div>
+
+		</section>
+
+		<footer class="nm_footer">
+			<div class="footer_container">
+
+
+				<div class="footer_contact">
+					<a href="/pages/contact-form"><img
+							src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_contact.png?v=1647955309"
+							alt="お問い合わせ"></a>
+				</div>
+
+
+				<div class="footer_menu">
+					<ul>
+						<li><a href="/pages/terms">利用規約</a></li>
+						<li><a href="/pages/policy">プライバシーポリシー</a></li>
+						<li><a href="/pages/contract">特定商取引法に基づく表記</a></li>
+						<li><a href="/pages/company">会社概要</a></li>
+						<li><a href="/pages/guide">利用ガイド</a></li>
+						<li><a href="/pages/faq">よくあるご質問</a></li>
+						<li><a href="/pages/contact-form">お問い合わせ</a></li>
+						<li><a href="https://grayparkaservice.com/oem.html" target="_blank">OEMのご相談</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="footer_copyright">©nagano / chiikawa committee　©Gray Parka Service</p>
+		</footer>
+
+	</div>
+	</div>
+
+	<div class="off-canvas--right-sidebar" data-active="cart" data-js-class="Transition" data-transition="at_start"
+		data-js-loaded="true">
+		<div class="off-canvas--focus-trigger" tabindex="0"></div>
+
+
+
+
+
+
+
+
+
+		<div class="off-canvas--focus-trigger" tabindex="0"></div>
+	</div>
+
+	<div class="off-canvas--left-sidebar" data-active="menu" data-js-class="Transition" data-transition="at_start"
+		data-js-loaded="true">
+		<div class="off-canvas--focus-trigger" tabindex="0"></div>
+
+		<div class="off-canvas--container" data-view="menu">
+			<div class="mobile-nav">
+				<div class="mobile-nav--header">
+
+					<div class="mobile-nav--search" data-item="nav-text" data-mq="small"></div>
+
+
+
+					<div class="mobile-nav--login" data-item="nav-text" data-mq="small"></div>
+
+				</div>
+
+				<div class="mobile-nav--menu"></div>
+				<div class="mobile-nav--localization"></div>
+			</div>
+		</div>
+
+		<div class="off-canvas--focus-trigger" tabindex="0"></div>
+	</div>
+
+	</div>
+
+	<div class="modal--prev">
+
+		<svg class="icon--root icon--chevron-left" viewBox="0 0 12 20">
+			<path d="M2.648 10l8.613-8.614L9.99.114.102 10l9.887 9.886 1.272-1.272z" fill-rule="nonzero"></path>
+		</svg>
+
+
+	</div>
+	<div class="modal--next">
+
+		<svg class="icon--root icon--chevron-right" viewBox="0 0 12 20">
+			<path d="M8.716 10L.102 18.614l1.273 1.272L11.261 10 1.375.114.102 1.386z" fill-rule="nonzero">
+			</path>
+		</svg>
+
+
+	</div>
+	</div>
+
+	<!-- 显示各种反馈消息，用户行为的确认 -->
+	<!-- 提供不同类型的反馈消息，这些消息在特定用户交互或事件发生后可能会显示出来 -->
+	<div class="feedback-bar--root" data-js-class="CoreFeedbackBar" data-open="false" data-critical-css="false"
+		data-js-loaded="true">
+		<div class="feedback-bar--message">
+			<!-- 感谢联系的消息 -->
+			<span data-item="accent-text" data-message="contact-modal" style="display: none;">
+				Thanks for contacting us! We'll get back to you shortly.
+			</span>
+			<!-- 感谢订阅的消息 -->
+			<span data-item="accent-text" data-message="newsletter" style="display: none;">
+				Thanks for subscribing
+			</span>
+			<!-- 感谢提交产品表单的消息 -->
+			<span data-item="accent-text" data-message="product-form" style="display: none;">
+				Thanks! We will notify you when it becomes available!
+			</span>
+			<!-- 购物车中有最大数量的商品 -->
+			<span data-item="accent-text" data-message="product--no-items" style="display: none;">
+				ご注文可能な最大数がカートに入っています
+			</span>
+			<!-- 购物车中只有一个商品 -->
+			<span data-item="accent-text" data-message="product--one-item" style="display: none;">
+				あと1つ
+			</span>
+			<!-- 购物车中有剩余商品的消息，[num_items] 会在运行时替换为实际数 -->
+			<span data-item="accent-text" data-message="product--n-items" style="display: none;">
+				There are only [num_items] items left to add to the cart
+			</span>
+		</div>
+	</div><!-- WorldShopping Checkout -->
+
+
+
+
+</body>
+
+</html>

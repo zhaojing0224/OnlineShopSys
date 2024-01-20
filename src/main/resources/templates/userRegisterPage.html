@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop</title>
+	<link href="/css/accountStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div id="shopify-section-announcement" class="shopify-section"></div>
+	<div id="shopify-section-header" class="shopify-section section--header">
+		<header class="site-header">
+
+			<div class="main">
+				<div class="inner">
+
+					<p><a href="/"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/logo_chiikawamarket.png?v=1659340705"
+								alt="ちいかわマーケット" class="header_logo"></a></p>
+
+					<ul>
+						<li><a href="/account/login"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
+									alt="ログイン"></a></li>
+						<li><a href="/cart"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
+									alt="カート"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="mobile_nav">
+
+				<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+				<label for="menu-toggle" class="menu-button"></label>
+				<div class="drawer-menu">
+					<div class="inner">
+
+						<div class="welcome">
+							<p>
+								こんにちはッ! ゲストさん
+							</p>
+							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+								alt="ちいかわマーケットへようこそ">
+						</div>
+
+						<div class="btn_login_mypage">
+
+							<a href="/account/login" class="login">会員登録・ログイン</a>
+
+						</div>
+
+						<div class="search">
+							<form action="/search" method="get" role="search">
+								<input type="hidden" name="type" value="product">
+								<input type="search" name="q" value="" placeholder="商品をさがす">
+								<button type="submit"></button>
+							</form>
+						</div>
+
+						<input id="acd-check1" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu1">キャラクターから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/chiikawa">ちいかわ</a></li>
+								<li><a href="/collections/hachiware">ハチワレ</a></li>
+								<li><a href="/collections/usagi">うさぎ</a></li>
+							</ul>
+						</div>
+
+						<input id="acd-check2" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu2">商品カテゴリから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+								<li><a href="/collections/stationery">文房具</a></li>
+								<li><a href="/collections/stickers">ステッカー</a></li>
+								<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+								<li><a href="/collections/towel">タオル</a></li>
+								<li><a href="/collections/recommend">おすすめ商品</a></li>
+								<li><a href="/collections/all">全商品</a></li>
+							</ul>
+						</div>
+
+						<ul class="guide_menu">
+							<li><a href="/pages/guide">ご利用ガイド</a></li>
+							<li><a href="/pages/faq">よくあるご質問</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<label for="menu-toggle" class="menu-background"></label>
+
+			</div>
+
+			<div class="sub">
+				<div class="inner">
+
+					<ul class="menu">
+
+						<li class="menu_chara"><span>キャラクター<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w1">
+										<li><b>キャラクター</b></li>
+										<li><a href="/collections/chiikawa">ちいかわ</a></li>
+										<li><a href="/collections/hachiware">ハチワレ</a></li>
+										<li><a href="/collections/usagi">うさぎ</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li class="menu_cate"><span>カテゴリ<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w2">
+										<li><b>カテゴリ</b></li>
+										<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+										<li><a href="/collections/stationery">文房具</a></li>
+										<li><a href="/collections/stickers">ステッカー</a></li>
+										<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+									</ol>
+
+									<ol class="w1">
+										<li><b>　</b></li>
+										<li><a href="/collections/towel">タオル</a></li>
+										<li><a href="/collections/recommend">おすすめ商品</a></li>
+										<li><a href="/collections/all">全商品</a></li>
+										<li><a href="/collections/newitems">新着商品一覧</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li><a href="/pages/guide">ご利用ガイド</a></li>
+						<li><a href="/blogs/info/">お知らせ</a></li>
+					</ul>
+
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<input type="hidden" name="type" value="product">
+							<input type="search" name="q" value="" placeholder="商品をさがす">
+							<button type="submit"></button>
+						</form>
+					</div>
+
+					<div class="welcome">
+						<p>
+							こんにちはッ! ゲストさん
+						</p>
+						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+							alt="ちいかわマーケットへようこそ">
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+
+	</div>
+
+
+	</div>
+
+	<main class="layout--main-content" id="main-content">
+
+		<div id="shopify-section-template--16808543846641__main" class="shopify-section">
+			<div class="login_wrapper">
+
+				<div class="customer--root" data-section-id="template--16808543846641__main">
+					<div class="customer--wrapper">
+						<div id="customer-register" class="customer--register">
+							<h1 data-item="section-heading">
+								新規会員登録
+							</h1>
+
+							<form method="post" th:action="@{/userRegisterProcess}" id="userRegister" accept-charset="UTF-8"
+								data-login-with-shop-sign-up="true"><input type="hidden" name="form_type"
+									value="create_customer"><input type="hidden" name="utf8" value="✓">
+
+
+
+								<div id="last_name">
+									<label for="last_name" class="label" data-item="accent-text">
+										姓
+									</label>
+									<br></br>
+									<input class="text" type="text" value="" name="lastName" id="last_name"
+										size="30" required="">
+								</div>
+
+								<div id="first_name">
+									<label for="first_name" class="label" data-item="accent-text">
+										名
+									</label>
+									<br></br>
+									<input class="text" type="text" value="" name="firstName" id="first_name"
+										size="30" required="">
+								</div>
+
+								<div id="email">
+									<label for="email" class="label" data-item="accent-text">
+										メールアドレス
+									</label>
+									<br></br>
+									<input class="text" type="text" value="" name="userId" id="userId"
+										size="30" required="">
+								</div>
+
+								<div id="password">
+									<label for="password" class="label" data-item="accent-text">
+										パスワード
+									</label>
+									<br></br>
+									<input class="password text" type="password" value="" name="password" id="password"
+										size="30" required="">
+								</div>
+
+								<p style="margin:20px 0 10px 0; font-weight:500; font-size:16px;">
+									利用規約および個人情報の取り扱いについて</p>
+
+								<div class="membership-terms">
+									<h2>ご利用規約</h2>
+									<p>ちいかわマーケット（以下「本サイト」という）をご利用いただく前に、ご利用規約をよくお読みください。<br>
+										株式会社グレイ・パーカー・サービス（以下「当社」という）が提供する本サイトをご利用いただく場合、ご利用規約のすべての内容について同意をいただいているものとみなします。また、関連する法律に従うこととなります。ご利用規約に同意いただけない場合はご利用をお控えください。
+									</p>
+									<h3>【ご利用について】</h3>
+									<p>お客様は、本サイトをご利用いただいた時点で、ご利用規約を承諾し従うこととなります。</p>
+									<h3>【著作権について】</h3>
+									<p>本サイトのすべての内容・情報などに関する著作権は、当社または当社に対し使用を許諾した第三者に帰属します。私的利用の目的を超えた、複製、頒布、販売、公表等の行為を禁止します。
+									</p>
+									<h3>【本利用規約の変更について】</h3>
+									<p>当社は、お客様への事前の通知・承諾なしに、本利用規約を変更できるものとします。<br>本利用規約が変更された後の本サイトのご利用については、変更後の新利用規約が適用されるものとします。<br>
+										当社は、お客様に対し、改めて、変更後の新利用規約への同意を求める場合があります。</p>
+									<h3>【本サイトの内容変更・中止等について】</h3>
+									<p>当社は、事前通知および承諾なく、本サイトの内容変更・中止・停止をすることができるものとします。なお、当社は本サイトの変更・中止・停止によって生じるいかなる損害について一切責任を負わないものとします。
+									</p>
+									<h3>【売買契約の成立】</h3>
+									<p>お客様が本サイトにおいてご注文を行うことは、契約の申込みになります。ご注文完了後に、当社システムからご注文完了メールを自動送信しますが、これはお客様のご注文手続が完了したことをお知らせする趣旨に留まります。当社において、後述する契約のお断り・取消しに関する事由に該当しないと判断し、商品を出荷した時点でお客様の申込みが承諾され契約が成立するものとします。なお、契約の成立後も、後述する契約のお断り・取消しに関する事由に該当することが判明した場合は、契約の取消しをさせていただくことがあります。
+										また、お客様が注文手続きを完了した場合であっても、決済の受付の先後により、購入した商品が売り切れとなる場合があります。この場合、当該商品にかかる購入契約が解除されたものとみなし、当社は当該商品等の引渡義務を免れます。また、当社は、購入代金の返金を除き、引渡を行わないことによってお客様に発生した一切の損害について責任を負わないことといたします。
+									</p>
+									<h3>【所有権の移転について】</h3>
+									<p>お客様が購入された商品の所有権は、当社より発送した商品がお客様の指定配送先に到着した時点で移転します。</p>
+									<h3>【契約のお断り・取消しについて】</h3>
+									<p>当社は、以下の事由の一つにお客様が該当した場合、お客様のご注文完了後や当社がご注文完了メールを送信した後でも契約の締結をお断りすることがあるほか、当社が商品を発送して契約が成立した後でも、契約を取り消すことができるものとします。
+									</p>
+									<ol>
+										<li>クレジットカード会社による審査等の結果、承認・決済が受けられなかった場合</li>
+										<li>お客様の個人情報等に虚偽の事実が認められた場合</li>
+										<li>ご注文の商品が長期入荷未定、または生産完了の場合</li>
+										<li>数量限定商品に対し、所定の数量を超えたご注文をいただいた場合</li>
+										<li>本規約、その他当社の規約や法令に対する違反が認められた場合</li>
+										<li>本サイトに掲載された価格その他の商品情報または販売条件等に誤りがあった場合</li>
+										<li>上記各号の一つに準ずる事由が認められた場合（過去のお客様と当社との取引において、上記各号の一つにお客様が該当していた場合を含みます。）、その他、当社においてご注文に応じられないと判断した場合
+										</li>
+									</ol>
+									<h3>【キャンセルについて】</h3>
+									<p>商品のキャンセルは、当社がご注文完了のメールを送信した後は、原則として応じられません。お客様のインターネット環境の都合によりメールが未達であっても応じられません。
+									</p>
+									<h3>【返品・交換について】</h3>
+									<p>商品の返品・交換には、初期不良以外応じられません。<br>
+										商品ではない販促品(ノベルティ)、外装段ボールの不良、破損などの交換はお受けできません。<br>
+										商品お届け後、万が一不備・不良がございましたら、商品到着後7日以内に、ちいかわマーケットカスタマーセンターへお問い合わせフォームよりご連絡ください。不良品は原則交換での対応となります。但し交換在庫が無いもの、交換が不適当と当社が判断する場合は返金するものとします。
+									</p>
+									<p>返品をお受けできない事例<br> (1)長期保管などによる、商品到着日より対応期間を過ぎてからの初期不良<br>
+										(2)事前連絡なしに返品された商品<br> (3)お客様が使用した後に傷や破損が生じた商品<br>
+										(4)ご購入者様以外からの交換依頼<br> (5)オークションサイト等正規ルート以外で購入されたとき<br>
+										(6)本サイト外の店舗（常設店、実店舗、インターネット店舗を含みますが、これに限りません。）で購入されたとき<br>(7)製造上の特性によるものである場合
+									</p>
+									<h3>【転売・不適切行為について】</h3>
+									<p>営利目的での、購入及び転売は禁止します。<br>
+										当社が営利目的・不正行為・不適切であると判断する行為（例えば、購入上限がある商品の個人または集団による反復注文、個人利用とは認め難い大量注文・大量キャンセル、反復または継続的な商品の転売を含み、これらに限られません。）をお客様またはお客様から商品を入手するなどした第三者が行った場合、また、お客様に商品の受取り拒否、長期の不在・音信不通その他の不審行為または営業妨害行為等があった場合は、当社の裁量により売買契約の取消し、解除、将来のご購入のお断り、その他適切な処置をとることが出来るものとします。これらの場合、お客様または第三者に損害が発生したとしても、当社はいかなる責任も負わないものとします。
+									</p>
+									<h3>【配達について】</h3>
+									<p>一部商品を除いて、在庫がある商品はご注文日の翌日から起算して７営業日以内、予約商品は発売日から7営業日以内に配送いたします。<br>
+										天候、自然災害、停電、システムトラブル、事件・事故その他何らかの事由により配達が遅延することや、ご指定の配達希望日時にお届けできないことがあります。これらの場合にお客様または第三者に発生した損害について、当社は、当社の故意によるものでない限り、いかなる責任も負わないものとします。
+									</p>
+									<h3>【ご注文の配送地域について】</h3>
+									<p>日本国外への発送は受け付けておりません。</p>
+									<h3>【会員登録に関して】</h3>
+									<p>(1)会員情報の登録<br>
+										会員情報の登録を希望されるお客様は、本規約を承諾していただいた上で、当社が別途指定する手続に従って会員情報を登録していただきます。
+									</p>
+									<p>(2)変更の届出<br>
+										氏名、住所、電話番号、その他当社に届出ている内容に変更が生じた場合には、速やかに当社所定の方法にて変更の届出をするものとします。</p>
+									<p>(3)譲渡等の禁止<br>
+										会員情報の登録によって有する権利を、第三者に譲渡、売買又は名義変更し、貸与し又は使用させ、担保に供する等の行為はできないものとします。
+									</p>
+									<p>(4)会員情報の登録を取消す場合には、所定の方法にて当社に届出るものとします。また、登録された会員情報は、一身専属のものであり、当社は当該お客様の死亡を知り得た時点を以って、同様の届出があったものとして取扱います。
+									</p>
+									<p>(5)会員情報登録による権利の取消し<br>
+										会員情報を登録されたお客様が以下の何れかに該当する場合、当社は、事前に通知することなく、直ちに当該お客様の権利を取消すことができるものとします。また、当社が前述の措置をとったことで、当該サービスを利用できなくなり、これにより当該お客様または第三者に損害が発生したとしても、当社は一切の責任を負いません。
+									</p>
+									<ul>
+										<li>当社への申告、届出内容に虚偽があった場合</li>
+										<li>決済手段として当該お客様が届出たクレジットカードが、クレジット会社による利用契約の解除その他の理由により、利用が認められなくなった場合
+										</li>
+										<li>料金等の支払債務の履行遅延または不履行があった場合</li>
+										<li>電話、FAX、Eメールその他の手段によっても、お客様情報を登録されたお客様との連絡が取れなくなった場合</li>
+										<li>その他、本規約に違反した場合</li>
+										<li>その他、不適切と当社が判断した場合</li>
+									</ul>
+									<p>その他、当社が不適当と判断する行為また、その理由につきましてはお答えいたしかねますのであらかじめご了承ください。</p>
+									<p>(6)会員IDおよびパスワードの管理責任<br>
+										会員IDおよびパスワードが大切なものであることを認識し、会員IDおよびパスワードの管理については、お客様が一切の責任を負うものとします。また、会員IDおよびパスワードを第三者に譲渡、売買又は名義変更し、貸与し又は使用させ、担保に供する等してはならないものとします。
+									</p>
+									<p>(7)禁止事項<br> 会員情報を登録されるお客様は、以下の行為を行ってはならないものとします。</p>
+									<ul>
+										<li>ご利用の際に虚偽の登録内容を申請する行為</li>
+										<li>購入を優位に進めるため意図的に複数のアカウントを申請する行為</li>
+										<li>本サービスの運営を妨げ、その他本サービスに支障をきたすおそれのある行為</li>
+										<li>クレジットカードを不正使用して本サービスを利用する行為</li>
+										<li>会員IDおよびパスワードを不正に使用する行為</li>
+										<li>他のお客様、第三者もしくは当社に迷惑、不利益もしくは損害を与える行為、またはそれらのおそれのある行為</li>
+										<li>他のお客様、第三者もしくは当社の著作権、プライバシーその他の権利を侵害する行為、またはそれらのおそれのある行為</li>
+										<li>公序良俗に反する行為その他法令に違反する行為、またはそれらのおそれのある行為</li>
+									</ul>
+									<h3>【個人情報の保護について】</h3>
+									<p>別途掲載する「個人情報保護ポリシー」に同意の上、本サイトを利用するものとします。</p>
+									<h3>【認証について】</h3>
+									<p>本サイトは、個人情報保護のため、信頼性が高いとされるインターネット上の暗号通信技術SSL（Secure Socket
+										Layer）を採用しています。ただし、当社はその安全性を保証するものではなく、万一、当社の帰責事由なくお客様の個人情報の漏洩等の事故が起こった場合、当社および各クレジットカード会社は責任を負いません。
+									</p>
+									<h3>【メールの削除等について】</h3>
+									<p>当社は、当社または本サイトへの誹謗、中傷、または本利用規約に違背する内容のメールを受信した場合は、何ら通知・返信等をすることなく当該メールを削除できるものとします。
+									</p>
+									<h3>【免責】</h3>
+									<p>当社は、本サイトの利用または利用不能により、お客様、お客様の関係者もしくは第三者等に生じた損害について、本利用規約・その他の規定等に明示的に定める場合または当社の故意により損害が発生した場合を除いて、いかなる責任も負いません。
+									</p>
+									<h3>【合意管轄裁判所について】</h3>
+									<p>本サイトに関してお客様またはその関係者との間で生じた紛争の管轄裁判所は、東京地方裁判所または東京簡易裁判所を専属的な合意管轄裁判所とします。
+									</p>
+									<h3>【準拠法について】</h3>
+									<p>本利用規約の解釈、適用については、日本国法を準拠法とします。</p>
+
+									<hr>
+
+									<h2>個人情報保護ポリシー</h2>
+									<p>「ちいかわマーケット（以下「本サイト」という）」では利用者の皆様が安心してご利用頂けるよう最低限の個人情報を提供頂いております。<br>
+										本サイトではご提供頂いた個人情報の保護について最大限の注意を払っています。 <br>
+										本サイトの個人情報保護についての考え方は以下の通りです。</p>
+									<ul>
+										<li>弊社では会員様により登録された個人及び団体や法人の情報については、本サイトにおいて最先端の機能やサービスを開発・提供するためにのみ利用し、会員個人情報の保護に細心の注意を払うものとします。
+										</li>
+										<li>このプライバシーポリシーの適用範囲は、本サイト で提供されるサービスのみであります。(範囲は下記、第1項に規定)</li>
+										<li>本規約に明記された場合を除き、目的以外の利用は致しません。(目的は下記、第2項に規定)</li>
+										<li>本規約に明記された場合を除き、第三者への開示は致しません。(管理は下記、第2項に規定)</li>
+										<li>その他本規約に規定された方法での適切な管理を定期的に行います。</li>
+										<li>本サイトは利用者の許可なくして、プライバシーポリシーの変更をすることができます<br>本サイトが、個人情報取得内容の変更・利用方法の変更・開示内容の変更等をした際には、利用者がその内容を知ることができるよう、弊社ホームページのお知らせに公開し、このプライバシーポリシーに反映することにより通知致します。
+										</li>
+									</ul>
+									<h3>1.本サイトのプライバシーポリシーについての考え方が適用される範囲</h3>
+									<ul>
+										<li>本サイトのプライバシーポリシーについての考え方は、会員が本サイトのサービスを利用される場合に適用されます。</li>
+										<li>会員が本サイトのサービスを利用される際に収集される個人情報は、本サイトの個人情報保護についての考え方に従って管理されます。
+										</li>
+										<li>本サイトの個人情報保護考え方は、
+											本サイトが直接提供されるサービスのみであり、リンク等でつながった他の組織・会社等のサービスは適用範囲外となります。</li>
+										<li>本サイトのサービスのご利用は、利用者の責任において行われるものとします。</li>
+										<li>弊社のホームページ及び当ホームページにリンクが設定されている他のホームページから取得された各種情報の利用によって生じたあらゆる損害に関して、本サイトは一切の責任を負いません。
+										</li>
+									</ul>
+									<h3>2.本サイトの個人情報の収集と利用</h3>
+									<p>本サイトでは会員の皆様に最先端の機能やサービスを開発・提供するために、会員について幾つかの個人情報が必要となります。</p>
+									<ul>
+										<li>ショップのID・パスワードは利用者ご自身の責任において管理をお願い致します。
+											<ol>
+												<li>パスワードは定期的に変更し、他人が類推しやすいような名前や生年月日、電話番号など は避けることをお勧め致します。
+												</li>
+												<li>また、知人・友人などであっても開示・貸与・譲渡しないで下さい。</li>
+												<li>お問合せのメールや弊社のホームページ上の Q&amp;Aにはパスワードを書き込まないようお願い致します。
+												</li>
+											</ol>
+										</li>
+										<li>収集された個人情報は本サイトのサービスを提供するために必要な限度においてのみ利用し、次の場合を除き、いかなる第三者にも提供致しません。
+										</li>
+										<li>会員の同意がある場合
+											<ol>
+												<li>会員から個人情報の利用に関する同意を求めるための電子メールを送付する場合</li>
+												<li>あらかじめ弊社と機密保持契約を締結している企業（例えば、業務委託先）等に必要な限度において開示する場合</li>
+												<li>会員に対し、弊社、または、弊社の業務提携先等の広告宣伝のための電子メール、ダイレクトメールを送付する場合
+												</li>
+												<li>本サイトにおける会員の行為が、本サイト方針・告知、本サイトの利用規約等に違反している場合に、他の会員、第三者または弊社の権利、財産を保護するために必要と認められる場合
+												</li>
+												<li>裁判所、行政機関の命令等、その他法律の定めに従って個人情報の開示を求められた場合、または犯罪の捜査、第三　者に対する権利侵害の排除若しくはその予防、その他これに準ずる必要性ある場合
+												</li>
+											</ol>
+										</li>
+										<li>会員は、弊社に対し、個人情報を上に定める方法で利用することにつきあらかじめ同意するものとし、異議を述べないものとします。
+										</li>
+										<li>また、本サイトでは次の様な場合、弊社のビジネスパートナーと会員の個人情報を共有する事があります。
+											<ol>
+												<li>会員向け特別サービスなど、事業的な理由がある場合。<br>この場合、情報を提供する前に会員の同意を求め、同意無しでは提供致しません。
+												</li>
+												<li>統計資料作成、市場調査、データ分析などを行う場合。<br>この場合、特定個人を判別することができない様に加工された情報だけを提供致します。
+												</li>
+											</ol>
+										</li>
+									</ul>
+									<h3>3. 問い合わせ先</h3>
+									<p>ここに示した個人情報についての考え方についてご不明な点などございましたら<a
+											href="/pages/contact-form">お問合せフォーム</a>からお問い合わせください。</p>
+
+								</div>
+
+								<div class="privacyCheck">
+									<input type="checkbox" name="" value="" id="privacyCheck"><label
+										for="privacyCheck">上記会員規約、個人情報の取り扱いについて同意する</label>
+								</div>
+
+								<div class="account--button-container" data-item="button">
+
+									<button type="submit" value="登録"
+										style="display: block; width: 100%; max-width: 300px; margin: 0px auto; border-radius: 30px; opacity: 0.25;"
+										disabled="">登録</button>
+
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script>
+				$(window).on('load', function () {
+					"use strict";
+					$('button[type="submit"]').prop("disabled", true).fadeTo(0, 0.25);
+					$('#privacyCheck').click(function () {
+						if ($(this).prop("checked")) {
+							$('button[type="submit"]').prop("disabled", false).fadeTo(0.5, 1);
+						} else {
+							$('button[type="submit"]').prop("disabled", true).fadeTo(0.5, 0.25);
+						}
+					});
+				});
+			</script>
+
+
+		</div>
+
+	</main>
+
+	</div>
+	</div>
+
+
+
+
+
+
+
+	<div id="shopify-section-footer" class="shopify-section section--footer">
+		<div style="margin-top:50px;">
+			<section class="banners_wrapper">
+
+				<ul>
+					<li><a href="/account/login"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_regist2.png?v=1647955309"
+								alt="会員登録"></a></li>
+					<li><a href="/pages/guide"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_guide2.png?v=1647955309"
+								alt="ご利用ガイド"></a></li>
+					<li><a href="/pages/faq"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_faq2.png?v=1647955309"
+								alt="よくあるお問い合わせ"></a></li>
+					<li><a href="/blogs/info"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_info3.png?v=1647955309"
+								alt="お知らせ"></a></li>
+				</ul>
+
+			</section>
+
+		</div>
+
+
+		<section class="sub_footer">
+
+			<div class="footer_img"><img
+					src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/footer-chiikawa.gif?v=1646646476"
+					alt="ちいかわマーケット"></div>
+
+		</section>
+
+		<footer class="nm_footer">
+			<div class="footer_container">
+
+
+				<div class="footer_contact">
+					<a href="/pages/contact-form"><img
+							src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_contact.png?v=1647955309"
+							alt="お問い合わせ"></a>
+				</div>
+
+
+				<div class="footer_menu">
+					<ul>
+						<li><a href="/pages/terms">利用規約</a></li>
+						<li><a href="/pages/policy">プライバシーポリシー</a></li>
+						<li><a href="/pages/contract">特定商取引法に基づく表記</a></li>
+						<li><a href="/pages/company">会社概要</a></li>
+						<li><a href="/pages/guide">利用ガイド</a></li>
+						<li><a href="/pages/faq">よくあるご質問</a></li>
+						<li><a href="/pages/contact-form">お問い合わせ</a></li>
+						<li><a href="https://grayparkaservice.com/oem.html" target="_blank">OEMのご相談</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="footer_copyright">©nagano / chiikawa committee　©Gray Parka Service</p>
+		</footer>
+
+	</div>
+	</div>
+
+
+
+
+
+</body>
+
+</html>

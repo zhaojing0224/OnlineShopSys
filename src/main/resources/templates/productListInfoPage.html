@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop backstage management</title>
+</head>
+
+<body>
+	<p>
+		<span th:text="${productListInfoPage}">商品情報一覧</span>
+	</p>
+
+	<table>
+		
+		<tr>
+            <th>商品ID</th>
+            <th>商品名</th>
+            <th>商品価格</th>
+            <th>商品写真</th>
+            <th>商品カテゴリ</th>
+            <th>商品説明</th>
+            <th>在庫数量</th>
+        </tr>
+		
+		<tr th:each="data : ${productInfoList}">
+			<td th:text="${data.productId}"></td>
+			<td th:text="${data.productName}"></td>
+			<td th:text="${data.productPrice}"></td>
+			<td>
+				<img th:src="@{'/images/productImg/' + ${data.productImg}}" width="100" height="100"
+					alt="Product Image">
+			</td>
+			<td th:text="${data.productCategory}"></td>
+			<td th:text="${data.productContents}"></td>
+			<td th:text="${data.stock}"></td>
+		</tr>
+	</table>
+</body>
+
+</html>

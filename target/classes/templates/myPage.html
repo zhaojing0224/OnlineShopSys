@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop</title>
+	<link href="/css/accountStyle.css" rel="stylesheet" type="text/css">
+	<link href="/css/mainStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div id="shopify-section-announcement" class="shopify-section"></div>
+	<div id="shopify-section-header" class="shopify-section section--header">
+		<header class="site-header">
+
+			<div class="main">
+				<div class="inner">
+
+					<p><a href="/"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/logo_chiikawamarket.png?v=1659340705"
+								alt="ちいかわマーケット" class="header_logo"></a></p>
+
+					<ul>
+						<li><a href="/account/login"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
+									alt="ログイン"></a></li>
+						<li><a href="/cart"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
+									alt="カート"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="mobile_nav">
+
+				<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+				<label for="menu-toggle" class="menu-button"></label>
+				<div class="drawer-menu">
+					<div class="inner">
+
+						<div class="welcome">
+							<p>
+								こんにちはッ! ゲストさん
+							</p>
+							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+								alt="ちいかわマーケットへようこそ">
+						</div>
+
+						<div class="btn_login_mypage">
+
+							<a href="/account/login" class="login">会員登録・ログイン</a>
+
+						</div>
+
+						<div class="search">
+							<form action="/search" method="get" role="search">
+								<input type="hidden" name="type" value="product">
+								<input type="search" name="q" value="" placeholder="商品をさがす">
+								<button type="submit"></button>
+							</form>
+						</div>
+
+						<input id="acd-check1" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu1">キャラクターから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/chiikawa">ちいかわ</a></li>
+								<li><a href="/collections/hachiware">ハチワレ</a></li>
+								<li><a href="/collections/usagi">うさぎ</a></li>
+							</ul>
+						</div>
+
+						<input id="acd-check2" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu2">商品カテゴリから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+								<li><a href="/collections/stationery">文房具</a></li>
+								<li><a href="/collections/stickers">ステッカー</a></li>
+								<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+								<li><a href="/collections/towel">タオル</a></li>
+								<li><a href="/collections/recommend">おすすめ商品</a></li>
+								<li><a href="/collections/all">全商品</a></li>
+							</ul>
+						</div>
+
+						<ul class="guide_menu">
+							<li><a href="/pages/guide">ご利用ガイド</a></li>
+							<li><a href="/pages/faq">よくあるご質問</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<label for="menu-toggle" class="menu-background"></label>
+
+			</div>
+
+			<div class="sub">
+				<div class="inner">
+
+					<ul class="menu">
+
+						<li class="menu_chara"><span>キャラクター<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w1">
+										<li><b>キャラクター</b></li>
+										<li><a href="/collections/chiikawa">ちいかわ</a></li>
+										<li><a href="/collections/hachiware">ハチワレ</a></li>
+										<li><a href="/collections/usagi">うさぎ</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li class="menu_cate"><span>カテゴリ<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w2">
+										<li><b>カテゴリ</b></li>
+										<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+										<li><a href="/collections/stationery">文房具</a></li>
+										<li><a href="/collections/stickers">ステッカー</a></li>
+										<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+									</ol>
+
+									<ol class="w1">
+										<li><b>　</b></li>
+										<li><a href="/collections/towel">タオル</a></li>
+										<li><a href="/collections/recommend">おすすめ商品</a></li>
+										<li><a href="/collections/all">全商品</a></li>
+										<li><a href="/collections/newitems">新着商品一覧</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li><a href="/pages/guide">ご利用ガイド</a></li>
+						<li><a href="/blogs/info/">お知らせ</a></li>
+					</ul>
+
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<input type="hidden" name="type" value="product">
+							<input type="search" name="q" value="" placeholder="商品をさがす">
+							<button type="submit"></button>
+						</form>
+					</div>
+
+					<div class="welcome">
+						<p>
+							こんにちはッ! ${userName} さん
+						</p>
+						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+							alt="ちいかわマーケットへようこそ">
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+
+	</div>
+
+
+
+	<div data-section-id="template--16808543682801__main">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1 data-item="section-heading" class="account_title">マイページ</h1>
+
+		<p class="logout_link"><a href="/logout" id="customer_logout_link">ログアウト</a></p>
+
+		<!--account_wrapper-->
+		<div class="account_wrapper">
+
+
+			<main class="layout--main-content" id="main-content">
+
+							<div class="accont_info">
+								<div class="account-line">
+									<h3>LINE ID連携</h3>
+									<dl>
+										<!--dt>LINE ID連携</dt-->
+										<p style="padding-top:5px;padding-bottom:5px;">会員情報とLINE
+											IDを一度連携していただくと、次回からはIDとパスワードを入力することなく、スムーズにログインできます。</p>
+										<div class="btn_edit_address">
+											<a href="/pages/line-id-connect" id="line-id-connect">LINE IDを連携する</a>
+										</div>
+									</dl>
+								</div>
+
+								<h3>会員登録情報</h3>
+								<dl>
+									<dt>氏名</dt>
+									<dd>
+										<td th:text="${userInfoObj.userName}"></td> 様
+									</dd>
+									<dt>メールアドレス</dt>
+									<dd>
+										<td th:text="${userInfoObj.userId}"></td>
+									</dd>
+									<dd class="note">※会員登録氏名およびメールアドレスの変更をご希望の場合は、<a
+											href="/pages/contact-form">お問い合わせ</a>よりご連絡ください</dd>
+								</dl>
+
+
+								<div class="default_address">
+									<h3>デフォルトの配送先</h3>
+
+									<p>
+										〒<td th:text="${userInfoObj.postCode}"></td><br>
+										<td th:text="${userInfoObj.todoufuken}" <br>
+										<td th:text="${userInfoObj.shikucyouson}" <br>
+										<td th:text="${userInfoObj.cyoumebanchi}" <br>
+										<td th:text="${userInfoObj.roomNumber}" <br>
+										<td th:text="${userInfoObj.userName}"></td>
+									</p>
+									<div class="btn_edit_address">
+										<a href="/account/addresses" id="view_address">住所を修正・追加</a>
+									</div>
+
+								</div>
+
+							</div>
+
+
+							<div class="account_orders">
+								<h3>注文履歴</h3>
+
+
+								<p data-item="paragraph">注文履歴はありません</p>
+
+
+							</div>
+
+
+
+
+
+						</div>
+						<!--account_wrapper-->
+
+
+
+
+			</main>
+
+
+
+
+
+		</div>
+		<!--account_wrapper-->
+	</div>
+
+
+
+
+	<div id="shopify-section-footer" class="shopify-section section--footer">
+		<div style="margin-top:50px;">
+			<section class="banners_wrapper">
+
+				<ul>
+					<li><a href="/account/login"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_regist2.png?v=1647955309"
+								alt="会員登録"></a></li>
+					<li><a href="/pages/guide"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_guide2.png?v=1647955309"
+								alt="ご利用ガイド"></a></li>
+					<li><a href="/pages/faq"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_faq2.png?v=1647955309"
+								alt="よくあるお問い合わせ"></a></li>
+					<li><a href="/blogs/info"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_info3.png?v=1647955309"
+								alt="お知らせ"></a></li>
+				</ul>
+
+			</section>
+
+		</div>
+
+
+		<section class="sub_footer">
+
+			<div class="footer_img"><img
+					src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/footer-chiikawa.gif?v=1646646476"
+					alt="ちいかわマーケット"></div>
+
+		</section>
+
+		<footer class="nm_footer">
+			<div class="footer_container">
+
+
+				<div class="footer_contact">
+					<a href="/pages/contact-form"><img
+							src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_contact.png?v=1647955309"
+							alt="お問い合わせ"></a>
+				</div>
+
+
+				<div class="footer_menu">
+					<ul>
+						<li><a href="/pages/terms">利用規約</a></li>
+						<li><a href="/pages/policy">プライバシーポリシー</a></li>
+						<li><a href="/pages/contract">特定商取引法に基づく表記</a></li>
+						<li><a href="/pages/company">会社概要</a></li>
+						<li><a href="/pages/guide">利用ガイド</a></li>
+						<li><a href="/pages/faq">よくあるご質問</a></li>
+						<li><a href="/pages/contact-form">お問い合わせ</a></li>
+						<li><a href="https://grayparkaservice.com/oem.html" target="_blank">OEMのご相談</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="footer_copyright">©nagano / chiikawa committee　©Gray Parka Service</p>
+		</footer>
+
+	</div>
+	</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop backstage management</title>
+</head>
+
+<body>
+
+		<h1>商品情報登録</h1>
+		<form th:action="@{/productRegisterPage}" method="post" enctype="multipart/form-data">
+
+			<label for="productId">商品ID:</label>
+			<input type="number" id="productId" name="productId" required><br>
+
+			<label for="productName">商品名:</label>
+			<input type="text" id="productName" name="productName" required><br>
+
+			<label for="productPrice">商品価格:</label>
+			<input type="number" id="productPrice" name="productPrice" required><br>
+
+			<label for="productImg">商品写真:</label>
+			<input type="file" id="productImg" name="productImg" accept="image/*" required><br>
+
+			<label for="productCategory">商品カテゴリ:</label>
+			<textarea id="productCategory" name="productCategory" required></textarea><br>
+			
+			<label for="productContents">商品説明:</label>
+			<textarea id="productContents" name="productContents" required></textarea><br>
+			
+			<label for="stock">在庫数量:</label>
+			<textarea id="stock" name="stock" required></textarea><br>
+			
+			<input type="submit" value="登録">
+		</form>
+
+	</body>
+
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop</title>
+	<link href="/css/collectionsStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+		<div id="shopify-section-announcement" class="shopify-section"></div>
+		<header class="site-header">
+
+			<div class="main">
+				<div class="inner">
+
+					<h1><img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/logo_chiikawamarket.png?v=1659340705"
+							alt="ちいかわマーケット" class="header_logo"></h1>
+
+					<ul>
+						<li><a href="/account/login"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
+									alt="ログイン"></a></li>
+						<li><a href="/cart"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
+									alt="カート"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="mobile_nav">
+
+				<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+				<label for="menu-toggle" class="menu-button"></label>
+				<div class="drawer-menu">
+					<div class="inner">
+
+						<div class="welcome">
+							<p>
+								こんにちはッ! ゲストさん
+							</p>
+							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+								alt="ちいかわオンラインショップへようこそ">
+						</div>
+
+						<div class="btn_login_mypage">
+
+							<a href="/account/login" class="login">会員登録・ログイン</a>
+
+						</div>
+
+						<div class="search">
+							<form action="/search" method="get" role="search">
+								<input type="hidden" name="type" value="product">
+								<input type="search" name="q" value="" placeholder="商品をさがす">
+								<button type="submit"></button>
+							</form>
+						</div>
+
+						<input id="acd-check1" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu1">キャラクターから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/chiikawa">ちいかわ</a></li>
+								<li><a href="/collections/hachiware">ハチワレ</a></li>
+								<li><a href="/collections/usagi">うさぎ</a></li>
+							</ul>
+						</div>
+
+						<input id="acd-check2" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu2">商品カテゴリから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+								<li><a href="/collections/stationery">文房具</a></li>
+								<li><a href="/collections/stickers">ステッカー</a></li>
+								<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+								<li><a href="/collections/towel">タオル</a></li>
+								<li><a href="/collections/recommend">おすすめ商品</a></li>
+								<li><a href="/collections/all">全商品</a></li>
+							</ul>
+						</div>
+
+						<ul class="guide_menu">
+							<li><a href="/pages/guide">ご利用ガイド</a></li>
+							<li><a href="/pages/faq">よくあるご質問</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<label for="menu-toggle" class="menu-background"></label>
+
+			</div>
+
+			<div class="sub">
+				<div class="inner">
+
+					<ul class="menu">
+
+						<li class="menu_chara"><span>キャラクター<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w1">
+										<li><b>キャラクター</b></li>
+										<li><a href="/collections/chiikawa">ちいかわ</a></li>
+										<li><a href="/collections/hachiware">ハチワレ</a></li>
+										<li><a href="/collections/usagi">うさぎ</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li class="menu_cate"><span>カテゴリ<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w2">
+										<li><b>カテゴリ</b></li>
+										<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+										<li><a href="/collections/stationery">文房具</a></li>
+										<li><a href="/collections/stickers">ステッカー</a></li>
+										<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+									</ol>
+
+									<ol class="w1">
+										<li><b>　</b></li>
+										<li><a href="/collections/towel">タオル</a></li>
+										<li><a href="/collections/recommend">おすすめ商品</a></li>
+										<li><a href="/collections/all">全商品</a></li>
+										<li><a href="/collections/newitems">新着商品一覧</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li><a href="/pages/guide">ご利用ガイド</a></li>
+						<li><a href="/blogs/info/">お知らせ</a></li>
+					</ul>
+
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<input type="hidden" name="type" value="product">
+							<input type="search" name="q" value="" placeholder="商品をさがす">
+							<button type="submit"></button>
+						</form>
+					</div>
+
+					<div class="welcome">
+						<p>
+							こんにちはッ! ゲストさん
+						</p>
+						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+							alt="ちいかわマーケットへようこそ">
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+	</div>
+
+
+
+	<main class="layout--main-content" id="main-content">
+
+		<div class="collection--root" data-js-class="Collection" data-js-loaded="true">
+
+
+				<div class="collection--header--root" data-section-id="template--16808543650033__collection-header"
+					data-alternative-color="false" data-apply-overlay="false" data-image-height="small"
+					data-show-image="false" data-spacing="none" data-title-alignment="center">
+					<div class="collection--header--heading">
+						<h1 data-item="featured-heading">
+							全商品
+						</h1>
+					</div>
+				</div>
+
+
+
+
+			</div>
+				<div class="collection--navigation--root" data-section-id="template--16808543650033__navigation"
+					data-show-navigation="true">
+
+					<div class="collection--navigation" data-container="block">
+
+
+						<div class="collection--navigation--filter" data-item="nav-text">
+
+
+
+							<div class="collection--navigation--button sortBtn" tabindex="0"
+								data-off-canvas--open="right-sidebar" data-off-canvas--view="collection-filter"
+								data-toggle-menu="sort-filter" aria-haspopup="menu">表示順</div>
+
+
+							<div class="collection--navigation--button refineBtn" tabindex="0"
+								data-off-canvas--open="right-sidebar" data-off-canvas--view="collection-filter"
+								data-toggle-menu="refine-filter" aria-haspopup="menu">絞り込み</div>
+
+
+							<div class="collection--navigation--button-wrap">
+								<div class="collection--navigation--button active" id="allShow"><a
+										href="/collections/all">すべて表示</a></div>
+								<div class="collection--navigation--button" id="saleShow"><a
+										href="/collections/all?filter.v.availability=1">在庫ありのみ表示</a></div>
+							</div>
+						</div>
+
+
+						<script>
+							//クエリを取得
+							let q = window.location.search;
+							//要素を設定
+							const saleShow = document.getElementById("saleShow");
+							const allShow = document.getElementById("allShow");
+							//クエリがあれば、activeクラスを設定
+							if (q.indexOf("filter.v.availability=1") == 1) {
+								saleShow.classList.add("active");
+								allShow.classList.remove("active");
+							} else {
+								saleShow.classList.remove("active");
+								allShow.classList.add("active");
+							}
+						</script>
+
+
+
+					</div>
+
+
+
+
+					<div class="collection--body--mobile-header" data-container="block" data-mq="small">
+
+
+						<div class="collection--body--mobile-refine" tabindex="0" data-item="accent-text"
+							data-off-canvas--open="right-sidebar" data-off-canvas--view="collection-filter"
+							data-toggle-menu="refine-filter" aria-haspopup="menu">
+							絞り込み
+						</div>
+
+					</div>
+
+
+
+
+
+					<div style="display:none !important;">
+						<div class="collection--navigation--options-container" data-container="block"
+							style="display: none;">
+							<ul class="collection--navigation--active-options" data-item="nav-text--sub">
+
+								<li class="collection--navigation--active-sort" tabindex="0" style="display:none;">
+									表示順:&nbsp;<span></span>
+									<svg class="icon--root icon--cross" viewBox="0 0 20 20">
+										<path
+											d="M10 8.727L17.944.783l1.273 1.273L11.273 10l7.944 7.944-1.273 1.273L10 11.273l-7.944 7.944-1.273-1.273L8.727 10 .783 2.056 2.056.783 10 8.727z"
+											fill-rule="nonzero"></path>
+									</svg>
+
+								</li>
+
+
+								<li class="collection--navigation--active-tag" tabindex="0" style="display:none;"
+									data-placeholder="">
+									<span></span>
+									<svg class="icon--root icon--cross" viewBox="0 0 20 20">
+										<path
+											d="M10 8.727L17.944.783l1.273 1.273L11.273 10l7.944 7.944-1.273 1.273L10 11.273l-7.944 7.944-1.273-1.273L8.727 10 .783 2.056 2.056.783 10 8.727z"
+											fill-rule="nonzero"></path>
+									</svg>
+
+								</li>
+								<li class="collection--navigation--active-price" tabindex="0" style="display:none;">
+									¥<span data-min-price=""></span>&nbsp;-&nbsp;¥<span data-max-price=""></span>
+									<svg class="icon--root icon--cross" viewBox="0 0 20 20">
+										<path
+											d="M10 8.727L17.944.783l1.273 1.273L11.273 10l7.944 7.944-1.273 1.273L10 11.273l-7.944 7.944-1.273-1.273L8.727 10 .783 2.056 2.056.783 10 8.727z"
+											fill-rule="nonzero"></path>
+									</svg>
+
+								</li>
+
+								<li class="collection--navigation--options-clear" tabindex="0" data-item="block-link">
+									<span>絞り込みを解除</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="collection--filter--for-off-canvas" style="display:none;"></div>
+
+				<div id="shopify-section-template--16808543650033__main" class="shopify-section">
+					<div class="collection--body--root" id="collection-root"
+						data-section-id="template--16808543650033__main" data-section-type="collection"
+						data-container="section" data-max-columns="4" data-url="/collections/all">
+
+						<div class="collection--body--grid collections_wrapper" data-container="panel" data-columns="4"
+							data-mobile-columns="2">
+
+							<div class="product--root" data-product-view="grid" data-label-color="dark"
+								data-label-shape="square" data-text-alignment="left" data-container="block">
+
+								<div class="product--label-container" data-item="overline">
+
+									<div class="product--label">売り切れ</div>
+
+								</div>
+
+								<a href="/collections/all/products/4582662969773" aria-label="ちいかわ 寄生されちゃったモモンガマスコット">
+									<div class="product--image-wrapper" style="height: 235px;">
+										<div class="product--image" data-item="image">
+											<div class="image--root" data-parallax="" data-cover="" data-cover-mobile=""
+												data-darken="" data-darken-mobile="" style="width: 100%;">
+
+												<div class="image--container" style="padding-top:100.0%;">
+													<img class="lazyautosizes lazyloaded"
+														data-thumb="//chiikawamarket.jp/cdn/shop/files/4582662969773_1_{width}x.jpg?v=1697600679"
+														data-sizes="auto" data-widths="[295,394,590,700,800,1000,1200]"
+														alt=""
+														data-srcset="//chiikawamarket.jp/cdn/shop/files/4582662969773_1_295x.jpg?v=1697600679 295w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_394x.jpg?v=1697600679 394w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_590x.jpg?v=1697600679 590w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_700x.jpg?v=1697600679 700w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_800x.jpg?v=1697600679 800w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_1000x.jpg?v=1697600679 1000w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_1200x.jpg?v=1697600679 1200w"
+														sizes="235px"
+														srcset="//chiikawamarket.jp/cdn/shop/files/4582662969773_1_295x.jpg?v=1697600679 295w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_394x.jpg?v=1697600679 394w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_590x.jpg?v=1697600679 590w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_700x.jpg?v=1697600679 700w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_800x.jpg?v=1697600679 800w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_1000x.jpg?v=1697600679 1000w, //chiikawamarket.jp/cdn/shop/files/4582662969773_1_1200x.jpg?v=1697600679 1200w">
+												</div>
+
+
+												<noscript>
+													<img src="//chiikawamarket.jp/cdn/shop/files/4582662969773_1_1024x1024.jpg?v=1697600679"
+														alt="">
+												</noscript>
+											</div>
+										</div>
+
+
+
+
+									</div>
+
+
+
+
+									<div class="product--root" data-product-view="grid" data-label-color="dark"
+										data-label-shape="square" data-text-alignment="left" data-container="block">
+
+										<div class="product--label-container" data-item="overline">
+
+
+
+
+
+										</div>
+
+										<a href="/collections/all/products/4901770726229"
+											aria-label="ちいかわ マスコットペン2 ボールペン（うさぎ）">
+											<div class="product--image-wrapper" style="height: 235px;">
+												<div class="product--image" data-item="image">
+													<div class="image--root" data-parallax="" data-cover=""
+														data-cover-mobile="" data-darken="" data-darken-mobile=""
+														style="width: 100%;">
+
+														<div class="image--container" style="padding-top:100.0%;">
+															<img class="lazyautosizes lazyloaded"
+																data-thumb="//chiikawamarket.jp/cdn/shop/files/4901770726229_1_{width}x.jpg?v=1697091102"
+																data-sizes="auto"
+																data-widths="[295,394,590,700,800,1000,1200]" alt=""
+																data-srcset="//chiikawamarket.jp/cdn/shop/files/4901770726229_1_295x.jpg?v=1697091102 295w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_394x.jpg?v=1697091102 394w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_590x.jpg?v=1697091102 590w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_700x.jpg?v=1697091102 700w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_800x.jpg?v=1697091102 800w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_1000x.jpg?v=1697091102 1000w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_1200x.jpg?v=1697091102 1200w"
+																sizes="235px"
+																srcset="//chiikawamarket.jp/cdn/shop/files/4901770726229_1_295x.jpg?v=1697091102 295w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_394x.jpg?v=1697091102 394w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_590x.jpg?v=1697091102 590w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_700x.jpg?v=1697091102 700w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_800x.jpg?v=1697091102 800w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_1000x.jpg?v=1697091102 1000w, //chiikawamarket.jp/cdn/shop/files/4901770726229_1_1200x.jpg?v=1697091102 1200w">
+														</div>
+
+
+														<noscript>
+															<img src="//chiikawamarket.jp/cdn/shop/files/4901770726229_1_1024x1024.jpg?v=1697091102"
+																alt="">
+														</noscript>
+													</div>
+												</div>
+
+
+
+
+											</div>
+
+											<div class="product--details-container">
+												<div class="product--details">
+													<div class="product--details-wrapper">
+
+
+
+
+														<div class="product_name">ちいかわ マスコットペン2 ボールペン（うさぎ）</div>
+
+
+
+
+
+													</div>
+
+
+													<div class="product_price">
+
+
+														¥748
+
+
+													</div>
+
+												</div>
+
+
+
+											</div>
+										</a>
+
+
+									</div>
+
+
+
+									<div class="product--root" data-product-view="grid" data-label-color="dark"
+										data-label-shape="square" data-text-alignment="left" data-container="block">
+
+										<div class="product--label-container" data-item="overline">
+
+
+										</div>
+
+										<div class="product--details-container">
+											<div class="product--details">
+												<div class="product--details-wrapper">
+
+
+
+
+													<div class="product_name">ちいかわ ジュースアップ 3（ちいかわA）</div>
+
+
+
+
+
+												</div>
+
+
+												<div class="product_price">
+
+
+													¥880
+
+
+												</div>
+
+											</div>
+										</div>
+								</a>
+							</div>
+
+
+
+							<div class="product--root" data-product-view="grid" data-label-color="dark"
+								data-label-shape="square" data-text-alignment="left" data-container="block">
+
+								<div class="product--label-container" data-item="overline">
+									<div class="product--label">売り切れ</div>
+								</div>
+								<a href="/collections/all/products/4550213546681"
+									aria-label="ちいかわ ダイカットマルチフリップカバー M＋（うさぎ）">
+									<div class="product--image-wrapper" style="height: 235px;">
+										<div class="product--image" data-item="image">
+											<div class="image--root" data-parallax="" data-cover="" data-cover-mobile=""
+												data-darken="" data-darken-mobile="" style="width: 100%;">
+												<div class="image--container" style="padding-top:100.0%;">
+													<img class="lazyautosizes ls-is-cached lazyloaded"
+														data-thumb="//chiikawamarket.jp/cdn/shop/files/4550213546681_{width}x.jpg?v=1697091553"
+														data-sizes="auto" data-widths="[295,394,590,700,800,1000,1200]"
+														alt=""
+														data-srcset="//chiikawamarket.jp/cdn/shop/files/4550213546681_295x.jpg?v=1697091553 295w, //chiikawamarket.jp/cdn/shop/files/4550213546681_394x.jpg?v=1697091553 394w, //chiikawamarket.jp/cdn/shop/files/4550213546681_590x.jpg?v=1697091553 590w, //chiikawamarket.jp/cdn/shop/files/4550213546681_700x.jpg?v=1697091553 700w, //chiikawamarket.jp/cdn/shop/files/4550213546681_800x.jpg?v=1697091553 800w, //chiikawamarket.jp/cdn/shop/files/4550213546681_1000x.jpg?v=1697091553 1000w, //chiikawamarket.jp/cdn/shop/files/4550213546681_1200x.jpg?v=1697091553 1200w"
+														sizes="235px"
+														srcset="//chiikawamarket.jp/cdn/shop/files/4550213546681_295x.jpg?v=1697091553 295w, //chiikawamarket.jp/cdn/shop/files/4550213546681_394x.jpg?v=1697091553 394w, //chiikawamarket.jp/cdn/shop/files/4550213546681_590x.jpg?v=1697091553 590w, //chiikawamarket.jp/cdn/shop/files/4550213546681_700x.jpg?v=1697091553 700w, //chiikawamarket.jp/cdn/shop/files/4550213546681_800x.jpg?v=1697091553 800w, //chiikawamarket.jp/cdn/shop/files/4550213546681_1000x.jpg?v=1697091553 1000w, //chiikawamarket.jp/cdn/shop/files/4550213546681_1200x.jpg?v=1697091553 1200w">
+												</div>
+												<noscript>
+													<img src="//chiikawamarket.jp/cdn/shop/files/4550213546681_1024x1024.jpg?v=1697091553"
+														alt="">
+												</noscript>
+											</div>
+										</div>
+									</div>
+
+									<div class="product--details-container">
+										<div class="product--details">
+											<div class="product--details-wrapper">
+												<div class="product_name">ちいかわ ダイカットマルチフリップカバー M＋（うさぎ）</div>
+											</div>
+											<div class="product_price">
+												¥4,378
+											</div>
+										</div>
+
+
+
+										<div id="shopify-section-footer" class="shopify-section section--footer">
+											<div style="margin-top:50px;">
+												<section class="banners_wrapper">
+
+													<ul>
+														<li><a href="/account/login"><img
+																	src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_regist2.png?v=1647955309"
+																	alt="会員登録"></a></li>
+														<li><a href="/pages/guide"><img
+																	src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_guide2.png?v=1647955309"
+																	alt="ご利用ガイド"></a></li>
+														<li><a href="/pages/faq"><img
+																	src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_faq2.png?v=1647955309"
+																	alt="よくあるお問い合わせ"></a></li>
+														<li><a href="/blogs/info"><img
+																	src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_info3.png?v=1647955309"
+																	alt="お知らせ"></a></li>
+													</ul>
+
+												</section>
+
+											</div>
+
+
+											<section class="sub_footer">
+
+												<div class="footer_img"><img
+														src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/footer-chiikawa.gif?v=1646646476"
+														alt="ちいかわマーケット"></div>
+
+											</section>
+
+											<footer class="nm_footer">
+												<div class="footer_container">
+
+
+													<div class="footer_contact">
+														<a href="/pages/contact-form"><img
+																src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_contact.png?v=1647955309"
+																alt="お問い合わせ"></a>
+													</div>
+
+
+													<div class="footer_menu">
+														<ul>
+															<li><a href="/pages/terms">利用規約</a></li>
+															<li><a href="/pages/policy">プライバシーポリシー</a></li>
+															<li><a href="/pages/contract">特定商取引法に基づく表記</a></li>
+															<li><a href="/pages/company">会社概要</a></li>
+															<li><a href="/pages/guide">利用ガイド</a></li>
+															<li><a href="/pages/faq">よくあるご質問</a></li>
+															<li><a href="/pages/contact-form">お問い合わせ</a></li>
+															<li><a href="https://grayparkaservice.com/oem.html"
+																	target="_blank">OEMのご相談</a></li>
+														</ul>
+													</div>
+												</div>
+
+												<p class="footer_copyright">©nagano / chiikawa committee　©Gray Parka
+													Service</p>
+											</footer>
+
+
+
+</body>
+
+</html>

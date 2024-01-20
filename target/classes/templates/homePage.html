@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>chiikawa online shop</title>
+	<link href="/css/mainStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+		<div id="shopify-section-announcement" class="shopify-section"></div>
+		<header class="site-header">
+
+			<div class="main">
+				<div class="inner">
+
+					<h1><img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/logo_chiikawamarket.png?v=1659340705"
+							alt="ちいかわマーケット" class="header_logo"></h1>
+
+					<ul>
+						<li><a href="/login"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
+									alt="ログイン"></a></li>
+						<li><a href="/cartPage"><img
+									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
+									alt="カート"></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div id="mobile_nav">
+
+				<input type="checkbox" id="menu-toggle" class="menu-checkbox">
+				<label for="menu-toggle" class="menu-button"></label>
+				<div class="drawer-menu">
+					<div class="inner">
+
+						<div class="welcome">
+							<p>
+								こんにちはッ! ゲストさん
+							</p>
+							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+								alt="ちいかわオンラインショップへようこそ">
+						</div>
+
+						<div class="btn_login_mypage">
+
+							<a href="/logInPage" class="logInPage">会員登録・ログイン</a>
+
+						</div>
+
+						<div class="search">
+							<form action="/search" method="get" role="search">
+								<input type="hidden" name="type" value="product">
+								<input type="search" name="q" value="" placeholder="商品をさがす">
+								<button type="submit"></button>
+							</form>
+						</div>
+
+						<input id="acd-check1" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu1">キャラクターから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/chiikawa">ちいかわ</a></li>
+								<li><a href="/collections/hachiware">ハチワレ</a></li>
+								<li><a href="/collections/usagi">うさぎ</a></li>
+							</ul>
+						</div>
+
+						<input id="acd-check2" class="acd-check" type="checkbox">
+						<label class="acd-label" for="acd-check2" id="acd-menu2">商品カテゴリから探す</label>
+						<div class="acd-content">
+							<ul>
+								<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+								<li><a href="/collections/stationery">文房具</a></li>
+								<li><a href="/collections/stickers">ステッカー</a></li>
+								<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+								<li><a href="/collections/towel">タオル</a></li>
+								<li><a href="/collections/recommend">おすすめ商品</a></li>
+								<li><a href="/collections/all">全商品</a></li>
+							</ul>
+						</div>
+
+						<ul class="guide_menu">
+							<li><a href="/pages/guide">ご利用ガイド</a></li>
+							<li><a href="/pages/faq">よくあるご質問</a></li>
+						</ul>
+
+					</div>
+				</div>
+				<label for="menu-toggle" class="menu-background"></label>
+
+			</div>
+
+			<div class="sub">
+				<div class="inner">
+
+					<ul class="menu">
+
+						<li class="menu_chara"><span>キャラクター<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w1">
+										<li><b>キャラクター</b></li>
+										<li><a href="/collections/chiikawa">ちいかわ</a></li>
+										<li><a href="/collections/hachiware">ハチワレ</a></li>
+										<li><a href="/collections/usagi">うさぎ</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li class="menu_cate"><span>カテゴリ<em>から探す</em></span>
+							<div class="in_menu">
+								<div class="menu_list">
+
+									<ol class="w2">
+										<li><b>カテゴリ</b></li>
+										<li><a href="/collections/nuigurumi">ぬいぐるみ</a></li>
+										<li><a href="/collections/stationery">文房具</a></li>
+										<li><a href="/collections/stickers">ステッカー</a></li>
+										<li><a href="/collections/bag">バッグ・ポーチ</a></li>
+									</ol>
+
+									<ol class="w1">
+										<li><b>　</b></li>
+										<li><a href="/collections/towel">タオル</a></li>
+										<li><a href="/collections/recommend">おすすめ商品</a></li>
+										<li><a href="/collections/all">全商品</a></li>
+										<li><a href="/collections/newitems">新着商品一覧</a></li>
+									</ol>
+
+								</div>
+							</div>
+						</li>
+
+						<li><a href="/pages/guide">ご利用ガイド</a></li>
+						<li><a href="/blogs/info/">お知らせ</a></li>
+					</ul>
+
+					<div class="search">
+						<form action="/search" method="get" role="search">
+							<input type="hidden" name="type" value="product">
+							<input type="search" name="q" value="" placeholder="商品をさがす">
+							<button type="submit"></button>
+						</form>
+					</div>
+
+					<div class="welcome">
+						<p>
+							こんにちはッ! ゲストさん
+						</p>
+						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
+							alt="ちいかわマーケットへようこそ">
+					</div>
+
+				</div>
+			</div>
+
+		</header>
+	</div>
+
+
+	<div class="scroll-infinity">
+		<div class="scroll-infinity__wrap">
+			<ul class="scroll-infinity__list scroll-infinity__list--right">
+				<li class="scroll-infinity__item"><img src="/images/scroll1.png" /></li>
+				<li class="scroll-infinity__item"><img src="/images/scroll2.png" /></li>
+				<li class="scroll-infinity__item"><img src="/images/scroll3.png" /></li>
+				<li class="scroll-infinity__item"><img src="/images/scroll4.png" /></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<ul class="sliderDots" style="" role="tablist">
+		<li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00"
+				aria-controls="slick-slide00" aria-label="1 of 6" tabindex="-1">1</button></li>
+		<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01"
+				aria-controls="slick-slide01" aria-label="2 of 6" tabindex="0" aria-selected="true">2</button></li>
+		<li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control02"
+				aria-controls="slick-slide02" aria-label="3 of 6" tabindex="-1">3</button></li>
+		<li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control03"
+				aria-controls="slick-slide03" aria-label="4 of 6" tabindex="-1">4</button></li>
+	</ul>
+
+	<table>
+
+		<br id="shopify-section-footer" class="shopify-section section--footer">
+			<div style="margin-top:50px;">
+
+			</div>
+
+
+		<br>
+		<br>
+
+			<div id="shopify-section-template--16808543944945__1635578311f286996f" class="shopify-section">
+				<div class="custom-liquid" data-section-id="template--16808543944945__1635578311f286996f"
+					data-spacing-above="false" data-spacing-below="false">
+					<section class="new_items_wrapper">
+
+						<div class="index_item_list">
+
+							<div class="index_item_header">
+								<h2>新着商品</h2>
+								<p>NEW ITEMS</p>
+							</div>
+
+							<div class="new_items">
+								<div class="item_box">
+									<a href="/collections/newitems/products/4582662906792"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662906792_pre_300x.jpg?v=1698201154"
+											alt="【予約】ちいかわ ハチワレとごきげんななかまマスコット（4個セット）【2024年2月上旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】"></a>
+									<h3><a href="/products/4582662906792">【予約】ちいかわ
+											ハチワレとごきげんななかまマスコット（4個セット）【2024年2月上旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】</a>
+									</h3>
+									<p>
+										¥4,400
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<div class="label_soldout">売り切れ</div>
+									<a href="/collections/newitems/products/4582662970250"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662970250_1_06c695fb-5ea3-4732-8244-4d6c7d3fc46c_300x.jpg?v=1697785119"
+											alt="【予約】ちいかわ 仮装たのしい～！マスコット（カボチャなうさぎ）【2024年1月下旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】"></a>
+									<h3><a href="/products/4582662970250">【予約】ちいかわ
+											仮装たのしい～！マスコット（カボチャなうさぎ）【2024年1月下旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】</a>
+									</h3>
+									<p>
+										¥1,430
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<div class="label_soldout">売り切れ</div>
+									<a href="/collections/newitems/products/4582662970267"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662970267_1_b89e20c5-daec-4cfb-aab9-3e1194fd2cfe_300x.jpg?v=1697785095"
+											alt="【予約】ちいかわ 仮装たのしい～！マスコット（カボチャなモモンガ）【2024年1月下旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】"></a>
+									<h3><a href="/products/4582662970267">【予約】ちいかわ
+											仮装たのしい～！マスコット（カボチャなモモンガ）【2024年1月下旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】</a>
+									</h3>
+									<p>
+										¥1,430
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<div class="label_soldout">売り切れ</div>
+									<a href="/collections/newitems/products/4582662961630"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662961630_1_300x.jpg?v=1697600792"
+											alt="ちいかわ しっぽふんわり・・・モモンガぬいぐるみ"></a>
+									<h3><a href="/products/4582662961630">ちいかわ しっぽふんわり・・・モモンガぬいぐるみ</a></h3>
+									<p>
+										¥1,760
+									</p>
+								</div>
+
+								<div class="btn_more">
+									<a href="/collections/newitems">もっと見る</a>
+								</div>
+
+							</div>
+					</section>
+				</div>
+			</div>
+			
+			<br></br>
+			<br></br>
+
+
+
+
+			<div id="shopify-section-template--16808543944945__163565682927c16ea0" class="shopify-section">
+				<div class="custom-liquid" data-section-id="template--16808543944945__163565682927c16ea0"
+					data-spacing-above="false" data-spacing-below="false">
+					<section class="rcmm_items_wrapper">
+
+						<div class="index_item_list">
+							<div class="index_item_header">
+								<h2>おすすめ商品</h2>
+								<p>RECOMMENDED ITEMS</p>
+							</div>
+							<div class="rcmm_items">
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4582662978027"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662978027_300x.jpg?v=1686650100"
+											alt="ちいかわ お出かけ楽しみ！な 小分けに便利な2個セットミニ巾着（ハチワレとラッコ）"></a>
+									<h3><a href="/products/4582662978027">ちいかわ お出かけ楽しみ！な 小分けに便利な2個セットミニ巾着（ハチワレとラッコ）</a>
+									</h3>
+									<p>
+										¥1,320
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4992272792980"><img
+											src="//chiikawamarket.jp/cdn/shop/products/4992272792980_1_300x.jpg?v=1669878986"
+											alt="ちいかわ ミニタオル（なぐさめるラッコ）"></a>
+									<h3><a href="/products/4992272792980">ちいかわ ミニタオル（なぐさめるラッコ）</a></h3>
+									<p>
+										¥770
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4992272781267"><img
+											src="//chiikawamarket.jp/cdn/shop/products/775004600-01_300x.jpg?v=1655269185"
+											alt="ちいかわ ミニタオル（はしるうさぎ）"></a>
+									<h3><a href="/products/4992272781267">ちいかわ ミニタオル（はしるうさぎ）</a></h3>
+									<p>
+										¥770
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4550213543611"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4550213543611_300x.jpg?v=1686135459"
+											alt="ちいかわ IIIIfit Loop iPhone対応 ケース（ラッコ）"></a>
+									<h3><a href="/products/4550213543611">ちいかわ IIIIfit Loop iPhone対応 ケース（ラッコ）</a></h3>
+									<p>
+										¥4,158〜
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4550432081376"><img
+											src="//chiikawamarket.jp/cdn/shop/products/4550432081376_1_300x.jpg?v=1663050480"
+											alt="ちいかわ ウッドバッジ（ラッコ）"></a>
+									<h3><a href="/products/4550432081376">ちいかわ ウッドバッジ（ラッコ）</a></h3>
+									<p>
+										¥660
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4550432081338"><img
+											src="//chiikawamarket.jp/cdn/shop/products/4550432081338_1_300x.jpg?v=1663050445"
+											alt="ちいかわ ウッドバッジ（ハチワレ）"></a>
+									<h3><a href="/products/4550432081338">ちいかわ ウッドバッジ（ハチワレ）</a></h3>
+									<p>
+										¥660
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4582662970304"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662970304_1_300x.jpg?v=1695269151"
+											alt="ちいかわ 仮装たのしい～！マスコット（ゾンビなちいかわ）"></a>
+									<h3><a href="/products/4582662970304">ちいかわ 仮装たのしい～！マスコット（ゾンビなちいかわ）</a></h3>
+									<p>
+										¥1,430
+									</p>
+								</div>
+
+
+
+								<div class="item_box">
+									<a href="/collections/recommend/products/4582662986756"><img
+											src="//chiikawamarket.jp/cdn/shop/files/4582662986756_1_300x.jpg?v=1683794412"
+											alt="ちいかわ はさむよ！クリップぬいぐるみ（ちいかわ）"></a>
+									<h3><a href="/products/4582662986756">ちいかわ はさむよ！クリップぬいぐるみ（ちいかわ）</a></h3>
+									<p>
+										¥2,200
+									</p>
+								</div>
+
+							<div class="btn_more">
+								<a href="/collections/recommend">もっと見る</a>
+							</div>
+
+						</div>
+
+					</section>
+				</div>
+
+			</div>
+
+	</table>
+
+
+
+
+
+
+	<div id="shopify-section-footer" class="shopify-section section--footer">
+		<div style="margin-top:50px;">
+			<section class="banners_wrapper">
+
+				<ul>
+					<li><a href="/account/login"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_regist2.png?v=1647955309"
+								alt="会員登録"></a></li>
+					<li><a href="/pages/guide"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_guide2.png?v=1647955309"
+								alt="ご利用ガイド"></a></li>
+					<li><a href="/pages/faq"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_faq2.png?v=1647955309"
+								alt="よくあるお問い合わせ"></a></li>
+					<li><a href="/blogs/info"><img
+								src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/guide_info3.png?v=1647955309"
+								alt="お知らせ"></a></li>
+				</ul>
+
+			</section>
+
+		</div>
+
+
+		<section class="sub_footer">
+
+			<div class="footer_img"><img
+					src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/footer-chiikawa.gif?v=1646646476"
+					alt="ちいかわマーケット"></div>
+
+		</section>
+
+		<footer class="nm_footer">
+			<div class="footer_container">
+
+
+				<div class="footer_contact">
+					<a href="/pages/contact-form"><img
+							src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_contact.png?v=1647955309"
+							alt="お問い合わせ"></a>
+				</div>
+
+
+				<div class="footer_menu">
+					<ul>
+						<li><a href="/pages/terms">利用規約</a></li>
+						<li><a href="/pages/policy">プライバシーポリシー</a></li>
+						<li><a href="/pages/contract">特定商取引法に基づく表記</a></li>
+						<li><a href="/pages/company">会社概要</a></li>
+						<li><a href="/pages/guide">利用ガイド</a></li>
+						<li><a href="/pages/faq">よくあるご質問</a></li>
+						<li><a href="/pages/contact-form">お問い合わせ</a></li>
+						<li><a href="https://grayparkaservice.com/oem.html" target="_blank">OEMのご相談</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<p class="footer_copyright">©nagano / chiikawa committee　©Gray Parka Service</p>
+		</footer>
+
+	</div>
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
