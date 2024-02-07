@@ -23,8 +23,9 @@
 
 					<ul>
 						<li><a href="/account/login"><img
-									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_login.png?v=1647955309"
-									alt="ログイン"></a></li>
+									src="//chiikawamarket.jp/cdn/shop/files/btn_mypage_112x.png?v=10950806131549700716"
+									width="56" height="56" alt="マイページ" loading="lazy">
+							</a></li>
 						<li><a href="/cart"><img
 									src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/btn_cart.png?v=1647955309"
 									alt="カート"></a></li>
@@ -39,20 +40,6 @@
 				<label for="menu-toggle" class="menu-button"></label>
 				<div class="drawer-menu">
 					<div class="inner">
-
-						<div class="welcome">
-							<p>
-								こんにちはッ! ゲストさん
-							</p>
-							<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
-								alt="ちいかわマーケットへようこそ">
-						</div>
-
-						<div class="btn_login_mypage">
-
-							<a href="/account/login" class="login">会員登録・ログイン</a>
-
-						</div>
 
 						<div class="search">
 							<form action="/search" method="get" role="search">
@@ -155,7 +142,11 @@
 
 					<div class="welcome">
 						<p>
-							こんにちはッ! ${userName} さん
+							こんにちはッ! 
+							<span th:text="${userInfoObj.userName}"></span> さん
+							<!-- こんにちはッ! [[${userInfoObj.userId}]] さん-->
+							
+							
 						</p>
 						<img src="https://cdn.shopify.com/s/files/1/0626/7142/1681/files/welcome.png?v=1648690419"
 							alt="ちいかわマーケットへようこそ">
@@ -186,74 +177,62 @@
 
 			<main class="layout--main-content" id="main-content">
 
-							<div class="accont_info">
-								<div class="account-line">
-									<h3>LINE ID連携</h3>
-									<dl>
-										<!--dt>LINE ID連携</dt-->
-										<p style="padding-top:5px;padding-bottom:5px;">会員情報とLINE
-											IDを一度連携していただくと、次回からはIDとパスワードを入力することなく、スムーズにログインできます。</p>
-										<div class="btn_edit_address">
-											<a href="/pages/line-id-connect" id="line-id-connect">LINE IDを連携する</a>
-										</div>
-									</dl>
-								</div>
-
-								<h3>会員登録情報</h3>
-								<dl>
-									<dt>氏名</dt>
-									<dd>
-										<td th:text="${userInfoObj.userName}"></td> 様
-									</dd>
-									<dt>メールアドレス</dt>
-									<dd>
-										<td th:text="${userInfoObj.userId}"></td>
-									</dd>
-									<dd class="note">※会員登録氏名およびメールアドレスの変更をご希望の場合は、<a
-											href="/pages/contact-form">お問い合わせ</a>よりご連絡ください</dd>
-								</dl>
-
-
-								<div class="default_address">
-									<h3>デフォルトの配送先</h3>
-
-									<p>
-										〒<td th:text="${userInfoObj.postCode}"></td><br>
-										<td th:text="${userInfoObj.todoufuken}" <br>
-										<td th:text="${userInfoObj.shikucyouson}" <br>
-										<td th:text="${userInfoObj.cyoumebanchi}" <br>
-										<td th:text="${userInfoObj.roomNumber}" <br>
-										<td th:text="${userInfoObj.userName}"></td>
-									</p>
-									<div class="btn_edit_address">
-										<a href="/account/addresses" id="view_address">住所を修正・追加</a>
-									</div>
-
-								</div>
-
+				<div class="accont_info">
+					<div class="account-line">
+						<h3>LINE ID連携</h3>
+						<dl>
+							<!--dt>LINE ID連携</dt-->
+							<p style="padding-top:5px;padding-bottom:5px;">会員情報とLINE
+								IDを一度連携していただくと、次回からはIDとパスワードを入力することなく、スムーズにログインできます。</p>
+							<div class="btn_edit_address">
+								<a href="/pages/line-id-connect" id="line-id-connect">LINE IDを連携する</a>
 							</div>
+						</dl>
+					</div>
+
+					<h3>会員登録情報</h3>
+					<dl>
+						<dt>氏名</dt>
+						<dd>
+							<td th:text="${userInfoObj.userName}"></td> 様
+						</dd>
+						<dt>メールアドレス</dt>
+						<dd>
+							<td th:text="${userInfoObj.userId}"></td>
+						</dd>
+						<dd class="note">※会員登録氏名およびメールアドレスの変更をご希望の場合は、<a href="/pages/contact-form">お問い合わせ</a>よりご連絡ください
+						</dd>
+					</dl>
 
 
-							<div class="account_orders">
-								<h3>注文履歴</h3>
+					<div class="default_address">
+						<h3>デフォルトの配送先</h3>
 
-
-								<p data-item="paragraph">注文履歴はありません</p>
-
-
-							</div>
-
-
-
-
-
+						<p>
+							〒<td th:text="${userInfoObj.postCode}"></td><br>
+							<td th:text="${userInfoObj.todoufuken}" <br>
+							<td th:text="${userInfoObj.shikucyouson}" <br>
+							<td th:text="${userInfoObj.cyoumebanchi}" <br>
+							<td th:text="${userInfoObj.roomNumber}" <br>
+							<td th:text="${userInfoObj.userName}"></td>
+						</p>
+						<div class="btn_edit_address">
+							<a href="/account/addresses" id="view_address">住所を修正・追加</a>
 						</div>
-						<!--account_wrapper-->
+
+					</div>
+
+				</div>
 
 
+				<div class="account_orders">
+					<h3>注文履歴</h3>
 
 
-			</main>
+					<p data-item="paragraph">注文履歴はありません</p>
+
+
+				</div>
 
 
 
@@ -261,6 +240,18 @@
 
 		</div>
 		<!--account_wrapper-->
+
+
+
+
+		</main>
+
+
+
+
+
+	</div>
+	<!--account_wrapper-->
 	</div>
 
 

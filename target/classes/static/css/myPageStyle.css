@@ -3355,4 +3355,10 @@ a.modal_close:hover {
 		color: #fff;
 	}
 
+img {
+ vertical-align: middle;
+ max-width: 100%;
+ height: auto;
+}
+
 }
