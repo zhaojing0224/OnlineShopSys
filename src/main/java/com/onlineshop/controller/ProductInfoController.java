@@ -53,11 +53,16 @@ public class ProductInfoController {
 
 		String filePath = null;
 
+		String uploadDir = "D:\\web\\OnlineShopSys\\src\\main\\resources\\static\\images\\productImg\\";
+		String imgPath = "images\\productImg\\";
+		String fileName = null;
 		try {
-			// 获取文件名
-			String fileName = productImg.getOriginalFilename();
+			// 获取文件名.
+			fileName = productImg.getOriginalFilename();
+			
+			
 			// 拼接保存文件的路径（使用服务器文件系统的绝对路径）
-			filePath = "D:\\web\\OnlineShopSystem\\src\\main\\resources\\static\\images\\productImg\\" + fileName;
+			filePath = uploadDir + fileName;
 
 			// 创建文件对象
 			File dest = new File(filePath);
@@ -84,7 +89,7 @@ public class ProductInfoController {
 		productInfo.setProductId(productId);
 		productInfo.setProductName(productName);
 		productInfo.setProductPrice(productPrice);
-		productInfo.setProductImg(filePath);
+		productInfo.setProductImg(imgPath + fileName);
 		productInfo.setProductCategory(productCategory);
 		productInfo.setProductContents(productContents);
 		productInfo.setStock(stock);

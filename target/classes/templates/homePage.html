@@ -211,15 +211,14 @@
 							</div>
 
 							<div class="new_items">
-								<div class="item_box">
-									<a href="/collections/newitems/products/4582662906792"><img
-											src="//chiikawamarket.jp/cdn/shop/files/4582662906792_pre_300x.jpg?v=1698201154"
-											alt="【予約】ちいかわ ハチワレとごきげんななかまマスコット（4個セット）【2024年2月上旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】"></a>
-									<h3><a href="/products/4582662906792">【予約】ちいかわ
-											ハチワレとごきげんななかまマスコット（4個セット）【2024年2月上旬より順次発送予定（発送延期の場合もキャンセル不可）】【通常商品と同時購入・配送希望日指定不可】【キャンペーン対象外】</a>
+								<div class="item_box" th:each="data : ${productInfoList}">
+									<a href="/"><img
+											th:src="@{${data.productImg}}"
+											width="300" height="300"
+											alt="Product Image"></a>
+									<h3><a href="/" th:text="${data.productCategory}"></a>
 									</h3>
 									<p>
-										¥4,400
 									</p>
 								</div>
 

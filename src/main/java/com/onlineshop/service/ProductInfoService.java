@@ -43,7 +43,7 @@ public class ProductInfoService {
 			obj.setProductPrice(p.getProductPrice());
 			obj.setProductImg(p.getProductImg());
 			obj.setProductCategory(p.getProductCategory());
-			obj.setProductImg(p.getProductContents());
+			obj.setProductContents(p.getProductContents());
 			obj.setStock(p.getStock());
 			
 			productInfoObjList.add(obj);
